@@ -1,0 +1,15 @@
+Pune aici pozele rețetelor (jpg sau png).
+
+Numele pozei trebuie să fie exact cel scris la câmpul "poza" din
+fișierul rețetei respective (din folderul retete/), INCLUSIV extensia.
+
+Exemplu: dacă în retete/sarmale.js ai scris poza: "poze/sarmale.jpg",
+atunci trebuie să pui aici un fișier numit exact "sarmale.jpg".
+
+SFAT: folosește .jpg pentru poze de mâncare, nu .png — arată la fel de bine,
+dar fișierul e de ~10 ori mai mic, deci site-ul se încarcă mult mai repede
+pe telefon. (Pozele actuale au fost deja convertite; originalele .png sunt
+păstrate în folderul "poze-originale", care NU se urcă pe GitHub.)
+
+Dacă nu ai încă o poză pentru o rețetă, nu e nicio problemă — site-ul
+va afișa un simbol în locul ei, până adaugi poza.

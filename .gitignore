@@ -1,0 +1,7 @@
+# Pozele originale, mari (.png) - le ținem doar local, nu pe GitHub
+poze-originale/
+
+# Fișiere de sistem Windows / macOS
+Thumbs.db
+desktop.ini
+.DS_Store

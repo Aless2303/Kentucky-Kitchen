@@ -1,0 +1,102 @@
+ȘABLON PENTRU O REȚETĂ NOUĂ
+============================
+
+Pașii pe scurt:
+1. Copiază tot ce e între liniile "COPIAZĂ DE AICI" și "PÂNĂ AICI" de mai jos.
+2. Lipește-l într-un fișier NOU în folderul "retete", cu numele rețetei
+   (ex: retete/sarmale.js) — fără spații sau diacritice în numele fișierului.
+3. Completează câmpurile cu textul tău (păstrează ghilimelele " " și virgulele ,).
+4. Pune poza rețetei în folderul "poze" (ex: poze/sarmale.jpg) și scrie
+   numele exact la câmpul "poza" — ATENȚIE la extensie: dacă fișierul e .jpg
+   scrii .jpg, dacă e .png scrii .png. Dacă nu ai poză încă, las-o așa cum e —
+   site-ul arată un simbol în locul ei până o adaugi.
+5. Deschide index.html și adaugă o linie nouă lângă celelalte rețete:
+   <script src="retete/sarmale.js"></script>
+   (pune-o chiar deasupra liniei care spune ADAUGĂ AICI RETETE NOI)
+6. Salvează tot și deschide (sau reîmprospătează) index.html în browser.
+
+IMPORTANT: "nutritie" e OBLIGATORIU la fiecare rețetă (nu opțional). Dacă nu
+știi cifrele exacte, pune o estimare cât de cât rezonabilă și lasă
+"estimare: true" ca să se vadă că nu e o valoare 100% verificată.
+
+CATEGORII: scrie la "categorie" exact una dintre acestea trei (cu diacritice),
+ca rețeta să apară în grupul potrivit din meniu:
+  "Feluri de mâncare"  -> mâncăruri gătite, care ies în cantitate mare
+  "Gustări"            -> burgeri, tacos, pizza, humus, ovăz etc.
+  "Deserturi"          -> dulciuri, prăjituri, budinci, pancakes
+
+---------- COPIAZĂ DE AICI (rețetă simplă) ----------
+RECIPES.push({
+  titlu: "Numele rețetei",
+  categorie: "Fel principal",
+  poza: "poze/numele-fisierului.jpg",
+  ingrediente: [
+    "ingredient 1",
+    "ingredient 2",
+    "ingredient 3"
+  ],
+  pasi: [
+    "primul pas",
+    "al doilea pas",
+    "al treilea pas"
+  ],
+  nutritie: {
+    per100: { kcal: 120, proteina: 10 },
+    portie: { nume: "O porție (~300g)", gramaj: 300, kcal: 360, proteina: 30 },
+    sfat: "orice sfat opțional, ex: cu ce se servește",
+    estimare: true
+  }
+});
+---------- PÂNĂ AICI ----------
+
+Observații:
+- La fiecare ingredient/pas/linie nouă din listă, adaugă o virgulă după cel dinainte.
+- La ULTIMUL element dintr-o listă, NU pune virgulă după el.
+- "categorie" și "poza" sunt opționale — poți șterge liniile respective.
+- "sfat" e opțional — șterge linia dacă nu ai o observație de adăugat.
+- "estimare: true" pui doar dacă TU nu ești sigur(ă) 100% de cifre (ex: le-ai
+  calculat, nu le-ai măsurat). Dacă ești sigur(ă), șterge linia "estimare: true,".
+- Dacă rețeta are porții diferite (ex: pentru două persoane cu cantități
+  diferite), înlocuiește "portie: {...}" cu "portii: [...]" — vezi exemplul
+  de mai jos.
+
+
+---------- COPIAZĂ DE AICI (rețetă cu secțiuni, ex: blat + cremă, și mai multe porții) ----------
+Dacă rețeta are mai multe părți (ex: blat, umplutură, sos), poți grupa
+ingredientele și pașii pe secțiuni. Dacă are mai multe porții diferite
+(ex: o porție pentru fiecare persoană), folosești "portii" (o listă) în loc
+de "portie" (una singură):
+
+RECIPES.push({
+  titlu: "Numele rețetei",
+  categorie: "Deserturi",
+  poza: "poze/numele-fisierului.jpg",
+  ingrediente: [
+    { sectiune: "Blat", itemi: [
+      "ingredient 1",
+      "ingredient 2"
+    ]},
+    { sectiune: "Cremă", itemi: [
+      "ingredient 3",
+      "ingredient 4"
+    ]}
+  ],
+  pasi: [
+    { sectiune: "Blat", itemi: [
+      "pasul 1",
+      "pasul 2"
+    ]},
+    { sectiune: "Cremă", itemi: [
+      "pasul 3"
+    ]}
+  ],
+  nutritie: {
+    per100: { kcal: 250, proteina: 6 },
+    portii: [
+      { nume: "Persoana A", gramaj: 300, kcal: 400, proteina: 25 },
+      { nume: "Persoana B", gramaj: 450, kcal: 600, proteina: 38 }
+    ],
+    estimare: true
+  }
+});
+---------- PÂNĂ AICI ----------

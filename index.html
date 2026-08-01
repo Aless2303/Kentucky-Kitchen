@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rețetele mele</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="menu-btn" class="hamburger" aria-label="Deschide meniul">
+  <span></span><span></span><span></span>
+</button>
+
+<button id="home-btn" class="home-btn" aria-label="Acasă">🏠 Acasă</button>
+
+<div class="hero" style="background-image: url('poze/background1.jpg');">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Rețetele mele</h1>
+    <p>Colțișorul gastronomic al familiei</p>
+  </div>
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+<nav id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <span>Rețete</span>
+    <button id="close-menu" class="icon-btn" aria-label="Închide meniul">✕</button>
+  </div>
+  <input id="search" type="text" placeholder="Caută o rețetă...">
+  <ul id="recipe-list" class="recipe-list"></ul>
+</nav>
+
+<div id="detail" class="detail" style="background-image: url('poze/background2_bucatarie.jpg');">
+  <div class="detail-overlay"></div>
+
+  <div class="detail-card">
+    <div id="d-img-wrap" class="d-img-wrap">
+      <img id="d-img" alt="">
+    </div>
+
+    <div class="d-content">
+      <span id="d-cat" class="d-cat"></span>
+      <h2 id="d-title"></h2>
+
+      <div id="d-nutritie" class="d-nutritie"></div>
+
+      <h3 class="sect-heading">🥗 Ingrediente</h3>
+      <div id="d-ingrediente" class="cards-grid"></div>
+
+      <h3 class="sect-heading">👨‍🍳 Mod de preparare</h3>
+      <div id="d-pasi" class="steps-wrap"></div>
+    </div>
+  </div>
+</div>
+
+<script>var RECIPES = [];</script>
+<script src="retete/tort-padurea-neagra.js"></script>
+<script src="retete/chili-con-carne-cu-orez.js"></script>
+<script src="retete/orez-fiert-perfect.js"></script>
+<script src="retete/vinete-umplute-asiatic.js"></script>
+<script src="retete/wok-noodles-pui-legume.js"></script>
+<script src="retete/ovaz-eu-cu-tu.js"></script>
+<script src="retete/pizza-uriasa-la-tava.js"></script>
+<script src="retete/ciulama-dietetica-pui-ciuperci.js"></script>
+<script src="retete/humus.js"></script>
+<script src="retete/burger-suprem-alex-alexia.js"></script>
+<script src="retete/budinca-cremoasa-dovleac.js"></script>
+<script src="retete/big-mac-tacos-pui.js"></script>
+<script src="retete/paste-alfredo-pui-ciuperci.js"></script>
+<script src="retete/briose-din-fasole.js"></script>
+<script src="retete/fried-rice.js"></script>
+<script src="retete/pancakes-banana-ovaz.js"></script>
+<!-- ADAUGĂ AICI RETETE NOI (vezi README.md) -->
+<script src="app.js"></script>
+
+</body>
+</html>
