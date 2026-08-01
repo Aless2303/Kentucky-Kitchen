@@ -36,8 +36,3 @@ app.js          -> logica (afișare carduri, căutare, fereastra cu rețeta)
 retete/         -> câte un fișier pentru fiecare rețetă
 poze/           -> pozele rețetelor
 ```
-
-## Ce urmează
-
-Când ești mulțumit(ă) de site, îl punem pe GitHub ca să-l ai online și
-să-l poți accesa de pe orice telefon/calculator.
